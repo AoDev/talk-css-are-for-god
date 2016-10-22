@@ -1,0 +1,6 @@
+/**
+ * Application entry point
+ */
+;(function () {
+
+})()

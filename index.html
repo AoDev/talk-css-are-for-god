@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS are for God</title>
+    <meta name="author" content="Kevin Purnelle">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="./css/reveal.css">
+    <link rel="stylesheet" href="./css/theme/serif.css" id="theme">
+    <link rel="stylesheet" href="./css/hljs/github.css">
+    <link rel="stylesheet" href="./css/presentation.css">
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Select transition type -->
+      <div class="slides">
+        <section id="transitions">
+          <p>
+            <a href="?transition=none#/transitions">None</a> -
+            <a href="?transition=fade#/transitions">Fade</a> -
+            <a href="?transition=slide#/transitions">Slide</a> -
+            <a href="?transition=convex#/transitions">Convex</a> -
+            <a href="?transition=concave#/transitions">Concave</a> -
+            <a href="?transition=zoom#/transitions">Zoom</a>
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <p style="color: #ff2277; font-size: 40px; font-weight: bold;">
+              ngBigParty III @ Prague
+            </p>
+
+            <h2 class="main-title">
+              CSS are for God
+            </h2>
+
+            <p class="space-bottom-1">
+              by Kevin Purnelle
+            </p>
+
+            <p>
+              <b>Engineer at RisingStack in Budapest</b>
+            </p>
+            <p>
+              twitter: @kevinpur <br/>
+              mail: kevin.purnelle@gmail.com
+            </p>
+          </section>
+          <section>
+            <h2>What is it about?</h2>
+            <ul>
+              <li>Caring more about product than technologies.</li>
+              <li>Sharing practices that made our development faster and better while scaling our product. = methodology</li>
+              <li>Because CSS are not cared enough.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Quick summary of web development history</h2>
+          </section>
+          <section>
+            <img src="./images/god-create-world.jpg"/>
+            <img src="./images/atom.gif" style="position: absolute; top: 0; right: 0"/>
+
+          </section>
+
+          <section>
+            <p>New beings appear on earth</p>
+            <img src="./images/web-developer.png"/>
+          </section>
+
+          <section>
+            <p>They created their own atoms</p>
+            <img width="500" src="./images/htmlcss.svg"/>
+            <p>To create their own world.</p>
+          </section>
+
+          <section>
+            <p>They <b>tried</b> to create their own world</p>
+            <img src="./images/peter-css.gif" style="width:75%"/>
+          </section>
+
+          <section>
+            <h2>Issues we all know</h2>
+            <ul>
+              <li>Cross-browser coherence</li>
+              <li>CSS maintenance & conflicts</li>
+              <li>Just getting the things done <br/>(eg: vertical (-) align?)</li>
+            </ul>
+            <p>
+              CSS mastering comes with pain. (a lot)
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <h2>New situations for frontend development</h2>
+          <section>
+            <ul>
+              <li>Parts of app built from independent teams</li>
+              <li>
+                Rise of the "fullstack developer"
+              </li>
+              <li>Ship "something that works" now (MVP) <br/> quality later -> refactors</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h2>Increase difficulty to:</h2>
+          <ul>
+            <li>
+              scale frontend while maintaining coherence:
+              <ul>
+                <li>from visual (UX) point of view</li>
+                <li>implementation point of view</li>
+              </ul>
+            </li>
+            <li>
+              produce quality right off the bat.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          Example: <img style="vertical-align: middle" width="300" src="./images/trace-logo.svg" />
+          <section>
+            <p>Monitoring tool for Nodejs microservices infrastructures</p>
+            <p>https://trace.risingstack.com/</p>
+          </section>
+
+          <section>
+          <p>Multiple teams:</p>
+          <ul>
+            <li>Metrics</li>
+            <li>Topology</li>
+            <li>Alerting</li>
+            <li>Transaction tracking</li>
+            <li>Performance</li>
+          </ul>
+          <p>
+          <small>(screencast)</small>
+          </p>
+          </section>
+        </section>
+
+        <section>
+          <h2>We want to avoid spreading Peter Griffin in every team</h2>
+          <img width="200" src="./images/peter-css.gif"/>
+          <img width="200" src="./images/peter-css.gif"/>
+          <img width="200" src="./images/peter-css.gif"/>
+          <img width="200" src="./images/peter-css.gif"/>
+          <img width="200" src="./images/peter-css.gif"/>
+          <img width="200" src="./images/peter-css.gif"/>
+          <img width="200" src="./images/peter-css.gif"/>
+          <img width="200" src="./images/peter-css.gif"/>
+
+        </section>
+
+        <section>
+          <h2>What can we do?</h2>
+
+          <section>
+            <p>Split your code</p>
+            <ul>
+              <li>App</li>
+              <li>Framework</li>
+            </ul>
+          </section>
+
+          <section>
+            <ul style="line-height: 1.7">
+              <li>Abstract CSS, HTML and JS in a box: UI components</li>
+              <li>Build a component library = UI framework</li>
+              <li>Provide documented components to all developers</li>
+              <li>Recognize UI patterns, <br/>recurring problems in your app and extract them (DRY)</li>
+              <li>Let the atomic level to "God": dedicate time and people to build UI components</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h3>What does a UI component do for us?</h3>
+          <ul>
+            <li>separation of concerns</li>
+            <li>reusable</li>
+            <li>can be unit tested</li>
+            <li>clear API</li>
+            <li><b>abstracts</b> presentation (HTML + CSS) & logic (JS) </li>
+            <li><b>encapsulates quality (eg: accessibility)</b></li>
+          </ul>
+          <img width="300" src="./images/component-box.jpg"/>
+        </section>
+
+        <section>
+          <h2>Example of developer journey: truncate text</h2>
+          <section>
+            <ul>
+              <li>CSS only?</li>
+              <li>hum...stack overflow</li>
+              <li>make some CSS class (or let's go crazy, make it inline)</li>
+            </ul>
+          </section>
+          <section>
+          white-space: nowrap; <br/>
+          overflow: hidden;<br/>
+          text-overflow: ellipsis;<br/>
+          </section>
+          <section>
+            <ul>
+              <li>Does not work...?</li>
+              <li>Stack overflow again.</li>
+              <li>Ok we need a display: <b>block container and a width</b></li>
+            </ul>
+          </section>
+          <section>
+            <img src="./images/truncate.png"/>
+          </section>
+        </section>
+
+        <section>
+          <h2>What can we do to achieve more quality?</h2>
+        </section>
+
+        <section>
+          <section>
+            <h2>People dedicated to UI framework</h2>
+            <img style="background: #fff" src="./images/teams-frontend.svg" />
+          </section>
+          <section>
+            <h3>Anyone can use components</h3>
+            <img style="background: #fff" height="600" src="./images/frontend-gods.svg" />
+          </section>
+        </section>
+
+        <section>
+          <h2>What kind of tools do we have?</h2>
+          <ul>
+            <li>Component based libs (eg: React)</li>
+            <li>Automatic documentation tools</li>
+            <li>Being able to develop components outside of where they would be used. (npm / electron-compile)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Developing components independently</h2>
+          <section>
+            <p>With npm and a private registry</p>
+            <ul>
+              <li>npm link</li>
+              <li>work on the component</li>
+              <li>commit and publish</li>
+            </ul>
+            <p>
+              Example: React command palette
+            </p>
+          </section>
+          <section>
+            <p> &nbsp;</p>
+            <p>with Electron compile (soon)</p>
+            <p>
+             "electron-compile compiles JS and CSS on the fly with a single call in your app's 'ready' function."
+            </p>
+            <p>
+              JavaScript ES6/ES7 (via Babel), TypeScript, CoffeeScript
+            </p>
+            </p>
+            <p>For CSS: Less, Stylus</p>
+            <p>
+              https://github.com/electron/electron-compile
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <h2>Pure "render" components as much as possible</h2>
+          <p>
+            The resulting UI is solely the result of its input. (props)
+          </p>
+          <p>
+            Easy to test. (example with Enzyme from AirBnB)
+          </p>
+          <p>Adopting principles of functional programming.</p>
+        </section>
+
+        <section>
+          <h2>Testing a react component</h2>
+          <img src="./images/react-test.png" />
+        </section>
+
+        <section>
+          <h2>Reusable logic: Higher Order Components</h2>
+          <section>
+            Add behaviour and create new components.
+          </section>
+          <section>
+            <img height="600" src="./images/hoc.png" />
+          </section>
+          <section>
+            Article: https://blog.risingstack.com/handling-react-forms-with-mobx-observables/
+          </section>
+        </section>
+
+        <section>
+          <h2>Automatic component documentation</h2>
+          <p>Example: react-styleguidedist</p>
+          <p>
+          https://github.com/sapegin/react-styleguidist
+          </p>
+          <p>
+            <small>screencast</small>
+          </p>
+        </section>
+
+        <section>
+          <h2>Results</h2>
+          <ul>
+            <li>
+              All the generic UI components are reusable
+              <ul>
+                <li>We can reuse our framework for another app</li>
+                <li>Our "app code" is smaller and focused on business problems.</li>
+              </ul>
+            </li>
+            <li>Developer experience goes UP!</li>
+            <li>Developers can focus their time on actual features</li>
+            <li>Quality is "encapsulated" -> less refactors, better UX</li>
+            <li>New people starts quickly</li>
+            <li>It's actually fun!</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Scaling with quality in mind</h3>
+          <p>split generic from business right from the start</p>
+          <img src="./images/conclusion.svg" />
+        </section>
+
+        <section>
+          <h3>Even God can have problems with atoms.</h3>
+          <img src="./images/ornib.jpg" />
+        </section>
+
+        <section>
+          <h2>Questions?</h2>
+          <p>
+            Kevin Purnelle @risingstack
+          </p>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="./lib/head.min.js"></script>
+    <script src="./lib/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: './plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: './plugin/zoom-js/zoom.js', async: true },
+          { src: './plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+    <script src="./app/app.js"></script>
+
+  </body>
+</html>

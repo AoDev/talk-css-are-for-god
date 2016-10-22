@@ -1,0 +1,53 @@
+
+
+body * {
+  font-family: Lato !important;
+  color: #fff;
+}
+
+body {
+  background: #333;
+}
+
+.main-title small{
+  vertical-align: baseline !important;
+}
+
+/**
+ * OVERRIDE THEME
+ */
+
+.reveal section img {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.reveal .table {
+  margin: 0;
+  width: 100%;
+}
+
+.reveal .table td {
+  vertical-align: top;
+}
+
+.reveal .text-big {
+  font-size: 2em;
+}
+
+.reveal a,
+.reveal a:visited {
+  color: #80BD01;
+}
+
+.space-bottom-1 {
+  margin-bottom: 64px !important;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  color: #89c6ff;
+}
